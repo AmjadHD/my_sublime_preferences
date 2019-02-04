@@ -1,0 +1,325 @@
+{
+	"auto_show_diagnostics_panel": false,
+	"clients":
+	{
+		"bashls":
+		{
+			"command":
+			[
+				"bash-language-server.cmd",
+				"start"
+			],
+			"enabled": true,
+			"languageId": "bash",
+			"scopes":
+			[
+				"source.shell.bash"
+			],
+			"syntaxes":
+			[
+				"Bash"
+			]
+		},
+		"clangd":
+		{
+			"command":
+			[
+				"clangd"
+			],
+			"languages":
+			[
+				{
+					"languageId": "c",
+					"scopes":
+					[
+						"source.c"
+					],
+					"syntaxes":
+					[
+						"C"
+					]
+				},
+				{
+					"languageId": "cpp",
+					"scopes":
+					[
+						"source.c++"
+					],
+					"syntaxes":
+					[
+						"C++"
+					]
+				},
+				{
+					"languageId": "objective-c",
+					"scopes":
+					[
+						"source.objc"
+					],
+					"syntaxes":
+					[
+						"Objective-C"
+					]
+				},
+				{
+					"languageId": "objective-cpp",
+					"scopes":
+					[
+						"source.objc++"
+					],
+					"syntaxes":
+					[
+						"Objective-C++"
+					]
+				}
+			]
+		},
+		"jdtls":
+		{
+			"command":
+			[
+				"java",
+				"-jar",
+				"C:/Program Files/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar",
+				"-configuration",
+				"C:/Program Files/jdt-language-server/config_win"
+			],
+			"enabled": true,
+			"languageId": "java",
+			"scopes":
+			[
+				"source.java"
+			],
+			"syntaxes":
+			[
+				"Java"
+			]
+		},
+		"julials":
+		{
+			"command":
+			[
+				"julia",
+				"--startup-file=no",
+				"--history-file=no",
+				"-e",
+				"using LanguageServer; server = LanguageServer.LanguageServerInstance(STDIN, STDOUT, false); run(server);"
+			],
+			"enabled": false,
+			"languageId": "julia",
+			"scopes":
+			[
+				"source.julia"
+			],
+			"syntaxes":
+			[
+				"Julia"
+			]
+		},
+		"kotlinls":
+		{
+			"command":
+			[
+				"C:/Program Files/KotlinLanguageServer/build/install/kotlin-language-server/bin/kotlin-language-server.bat"
+			],
+			"enabled": true,
+			"languageId": "kotlin",
+			"scopes":
+			[
+				"source.Kotlin"
+			],
+			"syntaxes":
+			[
+				"Kotlin"
+			]
+		},
+		"lsp-tsserver":
+		{
+			"command":
+			[
+				"lsp-tsserver"
+			],
+			"enabled": true,
+			"languages": [
+			{
+				"languageId": "javascript",
+				"scopes":
+				[
+					"source.js",
+					"source.jsx"
+				],
+				"syntaxes":
+				[
+					"Packages/JavaScript/JavaScript.sublime-syntax"
+				]
+			},
+			{
+			  	"command": ["typescript-language-server", "--stdio"],
+			  	"enabled": true,
+			  	"languageId": "typescript",
+			    "scopes": ["source.ts", "source.tsx"],
+			    "syntaxes": ["Typescript"]
+			}
+		]
+		},
+		"pyls":
+		{
+			"command":
+			[
+				"pyls"
+			],
+			"enabled": true,
+			"languageId": "python",
+			"configurationSources": ["flake8"],
+			"scopes":
+			[
+				"source.python"
+			],
+			"syntaxes":
+			[
+				"Python"
+			]
+		},
+        "mspyls":
+        {
+            "command": [ "dotnet.exe", "exec", "%USERPROFILE%\\Desktop\\Tfach\\python-language-server\\output\\bin\\Debug\\Microsoft.Python.LanguageServer.dll" ],
+            "scopes": ["source.python"],
+            "syntaxes": ["Packages/Python/Python.sublime-syntax"],
+            "languageId": "python",
+            "enabled": false,
+            "initializationOptions": 
+            {
+                "interpreter": 
+                {
+                    "properties": 
+                    {
+                        "UseDefaultDatabase": true,
+                        "Version": "3.7"
+                    }                    
+                }
+            }
+        },
+		"rls":
+		{
+			"command":
+			[
+				"rustup",
+				"run",
+				"nightly",
+				"rls"
+			],
+			"enabled": true,
+			"languageId": "rust",
+			"scopes":
+			[
+				"source.rust"
+			],
+			"syntaxes":
+			[
+				"Rust",
+				"RustEnhanced"
+			]
+		},
+		"vscode-css":
+		{
+			"command":
+			[
+				"node",
+				"%USERPROFILE%/AppData/Roaming/npm/node_modules/vscode-css-languageserver-bin/cssServerMain.js",
+				"--stdio"
+			],
+			"enabled": true,
+			"languages":
+			[
+				{
+					"languageId": "css",
+					"scopes":
+					[
+						"source.css"
+					],
+					"syntaxes":
+					[
+						"CSS"
+					]
+				},
+				{
+					"languageId": "scss",
+					"scopes":
+					[
+						"source.scss"
+					],
+					"syntaxes":
+					[
+						"SCSS"
+					]
+				},
+				{
+					"languageId": "sass",
+					"scopes":
+					[
+						"source.sass"
+					],
+					"syntaxes":
+					[
+						"Sass"
+					]
+				},
+				{
+					"languageId": "less",
+					"scopes":
+					[
+						"source.css.less"
+					],
+					"syntaxes":
+					[
+						"LESS"
+					]
+				}
+			]
+		},
+		"vscode-html":
+		{
+			"command":
+			[
+				"node",
+				"%USERPROFILE%/AppData/Roaming/npm/node_modules/vscode-html-languageserver-bin/htmlServerMain.js",
+				"--stdio"
+			],
+			"enabled": true,
+			"languageId": "html",
+			"scopes":
+			[
+				"text.html"
+			],
+			"syntaxes":
+			[
+				"Html"
+			]
+		},
+		"vscode-json":
+		{
+			"command":
+			[
+				"node",
+				"%USERPROFILE%/AppData/Roaming/npm/node_modules/vscode-json-languageserver-bin/jsonServerMain.js",
+				"--stdio"
+			],
+			"enabled": true,
+			"languageId": "json",
+			"scopes":
+			[
+				"source.json"
+			],
+			"syntaxes":
+			[
+				"JSON"
+			]
+		}
+	},
+	"completion_hint_type": "auto",
+	"show_code_actions_bulb": true,
+	// "log_debug": true,
+	// "log_stderr": true,
+	// "log_payloads": true,
+	// "log_server": true
+}

@@ -1,0 +1,14 @@
+{
+    "configurations":
+[
+    {
+        "name": "Python Debug",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "debugOptions" : {
+            "RedirectOutput": true,
+        }
+    },
+]
+}

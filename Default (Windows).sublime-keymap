@@ -1,0 +1,632 @@
+[
+{
+    "keys": ["f7"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "command_palette"
+    }
+},
+{
+    "keys": ["alt+x"],
+    "command": "bh_remove_brackets"
+},
+{
+    "keys": ["alt+s"],
+    "command": "swap_brackets"
+},
+{
+    "no_outside_adj": null,
+    "keys": ["alt+d"],
+    "command": "bh_key",
+    "args":
+    {
+        "lines" : true,
+        "plugin":
+        {
+            "type": ["__all__"],
+            "command": "bh_modules.bracketselect"
+        }
+    }
+},
+{
+    "keys": ["ctrl+i"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "goto",
+        "text": "#"
+    }
+},
+{
+    "keys": ["ctrl+;"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "goto",
+        "show_files": true
+    }
+},
+{
+    "keys": ["f5"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "command_palette",
+        "text": "Package Control: "
+    }
+},
+{
+    "keys": ["ctrl+'"],
+    "command": "left_delete"
+},
+{
+    "keys": ["ctrl+,"],
+    "command": "fold_all"
+},
+{
+    "keys": ["ctrl+."],
+    "command": "unfold_all"
+},
+{
+    "keys": ["ctrl+-"],
+    "command": "toggle_comment",
+    "args":
+    {
+        "block": false
+    }
+},
+{
+    "keys": ["ctrl+f"],
+    "command": "show_panel",
+    "args":
+    {
+        "panel": "replace",
+        "reverse": false
+    }
+},
+{
+    "keys": ["ctrl+h"],
+    "command": "replace_all",
+    "args":
+    {
+        "close_panel": true
+    },
+    "context": [
+    {
+        "key": "panel",
+        "operand": "replace"
+    },
+    {
+        "key": "panel_has_focus"
+    }]
+},
+{
+    "keys": ["ctrl+alt+m"],
+    "command": "show_scope_name"
+},
+{
+    "keys": ["ctrl+alt+z"],
+    "command": "toggle_zoom_pane",
+    "args":
+    {
+        "fraction": 0.9
+    }
+},
+{
+    "command": "lsp_format_document",
+    "keys": ["ctrl+alt+f"]
+},
+{
+    "keys": ["ctrl+alt+g"],
+    "command": "lsp_symbol_definition"
+},
+{
+    "keys": ["ctrl+v"],
+    "command": "paste_and_indent"
+},
+{
+    "keys": ["ctrl+shift+v"],
+    "command": "paste"
+},
+{
+    "keys": ["ctrl+f1"],
+    "command": "select_syntax_color_scheme"
+},
+{
+    "keys": ["shift+f5"],
+    "command": "package_resource_viewer"
+},
+{
+    "keys": ["f8"],
+    "command": "edit_settings"
+},
+{
+    "keys": ["ctrl+f8"],
+    "command": "edit_settings",
+    "args":
+    {
+        "base_file": "${packages}/Default/Preferences.sublime-settings",
+        "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
+    }
+},
+{
+    "keys": ["shift+f8"],
+    "command": "edit_settings",
+    "args":
+    {
+        "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+        "default": "[\n\t$0\n]\n"
+    }
+},
+{
+    "keys": ["ctrl+shift+o"],
+    "command": "prompt_open_folder"
+},
+{
+    "keys": ["ctrl+k", "ctrl+l"],
+    "command": "title_case"
+},
+{
+    "keys": ["ctrl+k", "ctrl+i"],
+    "command": "swap_case"
+},
+{
+    "keys": ["ctrl+k", "ctrl+u"],
+    "command": "upper_case"
+},
+{
+    "keys": ["é"],
+    "command": "insert",
+    "args":
+    {
+        "characters": "\n"
+    }
+},
+{
+    "keys": ["é"],
+    "command": "insert",
+    "args":
+    {
+        "characters": ";\n"
+    },
+    "context": [
+        {
+            "key": "preceding_text",
+            "operator": "not_regex_contains",
+            "operand": "(\\{|\\}|;|\\(|\\[)$|^( *)?$"
+        },
+        {
+            "key": "selector",
+            "operand": "source.java, source.css, source.c, source.c++"
+        }
+    ]
+},
+{
+    "keys": ["é"],
+    "command": "insert",
+    "args":
+    {
+        "characters": ",\n"
+    },
+    "context": [
+        {
+            "key": "preceding_text",
+            "operator": "not_regex_contains",
+            "operand": "(//|\\{|\\}|,|\\(|\\[)?\\s*?$|^\\s*?$"
+        },
+        {
+            "key": "selector",
+            "operand": "source.json"
+        }
+    ]
+},
+{
+    "keys": ["ctrl+alt+8"],
+    "command": "insert",
+    "args":
+    {
+        "characters": "("
+    }
+},
+{
+    "keys": ["super+]"],
+    "command": "insert",
+    "args":
+    {
+        "characters": "'"
+    }
+},
+{
+    "keys": ["super+a"],
+    "command": "insert",
+    "args":
+    {
+        "characters": "{"
+    }
+},
+{
+    "keys": ["ctrl+alt+8"],
+    "command": "insert",
+    "args":
+    {
+        "characters": "("
+    }
+},
+{
+    "keys": ["\""],
+    "command": "insert_snippet",
+    "args":
+    {
+        "contents": "\"$1\"$0"
+    },
+    "context": [
+    {
+        "key": "setting.auto_match_enabled",
+        "operator": "equal",
+        "operand": true
+    },
+    {
+        "key": "selection_empty",
+        "operator": "equal",
+        "operand": true,
+        "match_all": true
+    },
+    {
+        "key": "following_text",
+        "operator": "regex_contains",
+        "operand": "^(?:\t| |\\)|]|\\}|>|\\\"|'|:|$|,|)",
+        "match_all": true
+    },
+    {
+        "key": "preceding_text",
+        "operator": "not_regex_contains",
+        "operand": "[\"a-zA-Z0-9_]$",
+        "match_all": true
+    },
+    {
+        "key": "eol_selector",
+        "operator": "not_equal",
+        "operand": "string.quoted.double - punctuation.definition.string.end",
+        "match_all": true
+    }]
+},
+{
+    "keys": ["'"],
+    "command": "insert_snippet",
+    "args":
+    {
+        "contents": "'$1'$0"
+    },
+    "context": [
+    {
+        "key": "setting.auto_match_enabled",
+        "operator": "equal",
+        "operand": true
+    },
+    {
+        "key": "selection_empty",
+        "operand": true,
+        "match_all": true
+    },
+    {
+        "key": "following_text",
+        "operator": "regex_contains",
+        "operand": "^(?:\t| |\\)|]|\\}|>|\\\"|'|:|$|,|)",
+        "match_all": true
+    },
+    {
+        "key": "preceding_text",
+        "operator": "not_regex_contains",
+        "operand": "['a-zA-Z0-9_]$",
+        "match_all": true
+    },
+    {
+        "key": "eol_selector",
+        "operator": "not_equal",
+        "operand": "string.quoted.single - punctuation.definition.string.end",
+        "match_all": true
+    }]
+},
+{
+    "keys": ["("],
+    "command": "insert_snippet",
+    "args":
+    {
+        "contents": "($1)$0"
+    },
+    "context": [
+    {
+        "key": "setting.auto_match_enabled",
+        "operator": "equal",
+        "operand": true
+    },
+    {
+        "key": "selection_empty",
+        "operator": "equal",
+        "operand": true,
+        "match_all": true
+    },
+    {
+        "key": "following_text",
+        "operator": "regex_contains",
+        "operand": "^(?:\t| |\\)|]|;|\\}|\\\"|'|:|$|,|)",
+        "match_all": true
+    }]
+},
+{
+    "keys": ["["],
+    "command": "insert_snippet",
+    "args":
+    {
+        "contents": "[$1]$0"
+    },
+    "context": [
+    {
+        "key": "setting.auto_match_enabled",
+        "operand": true
+    },
+    {
+        "key": "selection_empty",
+        "operand": true,
+        "match_all": true
+    },
+    {
+        "key": "following_text",
+        "operator": "regex_contains",
+        "operand": "^(?:\t| |\\)|]|;|\\}|\\\"|'|:|$|,|)",
+        "match_all": true
+    }]
+},
+{
+    "keys": ["{"],
+    "command": "insert_snippet",
+    "args":
+    {
+        "contents": "{$1}$0"
+    },
+    "context": [
+    {
+        "key": "setting.auto_match_enabled",
+        "operand": true
+    },
+    {
+        "key": "selection_empty",
+        "operand": true,
+        "match_all": true
+    },
+    {
+        "key": "following_text",
+        "operator": "regex_contains",
+        "operand": "^(?:\t| |\\)|]|\\}|\\\"|'|:|$|,|)",
+        "match_all": true
+    }]
+},
+{
+    "keys": ["ctrl+left"],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/swap_line_up_and_indent.sublime-macro"
+    }
+},
+{
+    "keys": ["é"],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/new_line_and_indent.sublime-macro"
+    },
+    "context": [
+    {
+        "key": "preceding_text",
+        "operator": "regex_contains",
+        "operand": "\\{$"
+    },
+    {
+     "key": "following_text",
+     "operator": "regex_contains",
+     "operand": "^\\}"
+    }
+]
+},
+{
+    "keys": ["ctrl+right"],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/swap_line_down_and_indent.sublime-macro"
+    }
+},
+{
+    "keys": ["f10"],
+    "command": "clone_file_to_new_view"
+},
+{
+    "keys": ["f9"],
+    "command": "toggle_bookmark"
+},
+{
+    "keys": ["ctrl+f9"],
+    "command": "next_bookmark"
+},
+{
+    "keys": ["ctrl+shift+f9"],
+    "command": "prev_bookmark"
+},
+{
+    "keys": ["ctrl+shift+f5"],
+    "command": "prompt_select_workspace"
+},
+{
+    "keys": ["ctrl+u"],
+    "command": "profile"
+},
+{
+    "keys": ["ctrl+alt+f8"],
+    "command": "edit_syntax_settings"
+},
+{
+    "command": "fold_me",
+    "keys": ["ctrl+e"],
+    "context": [
+        {
+            "key": "selector",
+            "operator": "not_equal",
+            "operand": "source.python"
+        }
+    ],
+},
+{ "keys": ["ctrl+context_menu"], "command": "jump_back" },
+{ "keys": ["ctrl+shift+context_menu"], "command": "jump_forward" },
+{ "keys": ["ctrl+insert"], "command": "cancel_build" },
+// terminus
+{
+    "keys": ["ctrl+'"],
+    "context": [
+        { "key": "terminus_view" }
+    ],
+    "command": "terminus_keypress",
+    "args": {
+        "key": "backspace"
+    }
+},
+{
+    "keys": ["escape"],
+    "command": "hide_auto_complete",
+    "context": [
+        { "key": "terminus_view" },
+        { "key": "auto_complete_visible"}
+    ]
+},
+{
+    "keys": ["escape"],
+    "command": "hide_panel",
+    "context": [
+        { "key": "terminus_view" }
+    ]
+},
+{
+    "keys": ["down"],
+    "command": "move",
+    "args": {"by": "lines", "forward": true},
+    "context": [
+        { "key": "terminus_view" },
+        { "key": "auto_complete_visible" }
+    ]
+},
+{
+    "keys": ["tab"],
+    "command": "commit_completion",
+    "context": [
+        { "key": "terminus_view" },
+        { "key": "auto_complete_visible"}
+    ]
+},
+{
+    "keys": ["ctrl+t"],
+    "command": "toggle_terminus_panel"
+},
+{ "keys": ["ctrl+c"], "command": "copy",
+    "context":
+    [
+        { "key": "terminus_view" },
+        { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+},
+{ "keys": ["ctrl+v"], "command": "paste",
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+{ "keys": ["ctrl+w"], "command": "terminus_close",
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+{
+    "keys": ["("],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/round.sublime-macro"
+    },
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+{
+    "keys": ["{"],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/curly.sublime-macro"
+    },
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+{
+    "keys": ["["],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/square.sublime-macro"
+    },
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+{
+    "keys": ["\""],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/double.sublime-macro"
+    },
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+{
+    "keys": ["'"],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/single.sublime-macro"
+    },
+    "context":
+    [
+        { "key": "terminus_view" }
+    ]
+},
+// SendCode
+// Send code to change the working folder to that holding the current Julia file
+{
+    "keys": ["ctrl+shift+x", "ctrl+f"], "command": "send_code",
+    "args": {"cmd": "cd(\"$file_path\")"},
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "source.julia" }
+    ]
+},
+// Send code to display help information. Thanks to @mbauman for the suggestion.
+{
+    "keys": ["ctrl+shift+x", "ctrl+h"], "command": "send_code",
+    "args": {"cmd": "REPL.@repl $selection"},
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "source.julia" }
+    ]
+},
+{
+    "keys": ["ctrl+alt+context_menu"], "command": "send_code",
+    "context": [
+        { "key": "selector", "operator": "equal", "operand": "source" }
+    ]
+},
+]

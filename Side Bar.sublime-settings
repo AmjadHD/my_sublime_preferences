@@ -1,0 +1,7 @@
+{
+	"auto_close_empty_groups": true,
+    "close_affected_buffers_when_deleting_even_if_dirty": true,
+    "new_files_relative_to_project_root": true,
+    "new_folders_relative_to_project_root": true,
+    "i_donated_to_sidebar_enhancements_developer": true
+}

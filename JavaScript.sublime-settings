@@ -1,0 +1,10 @@
+{
+	"extensions":
+	[
+		"coffee"
+	],
+    "auto_complete_triggers":
+    [
+        {"characters": ".", "selector": "source.js"}
+    ]
+}

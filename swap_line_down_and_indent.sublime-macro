@@ -1,0 +1,4 @@
+[
+    {"command": "swap_line_down"},
+    {"command": "reindent", "args": {"single_line": true}}
+]

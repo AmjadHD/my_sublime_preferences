@@ -1,0 +1,8 @@
+{
+	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
+	"extensions":
+	[
+		"sublime-settings",
+		".sublimelinterrc"
+	]
+}

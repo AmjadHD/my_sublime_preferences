@@ -1,0 +1,5 @@
+// These settings override both User and Default settings for the TextMate Syntax Definition (YAML) syntax
+{
+    
+    "color_scheme": "Monokai.sublime-color-scheme"
+}

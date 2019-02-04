@@ -1,0 +1,6 @@
+[
+{"command": "insert", "args": {"characters": "\n"}},
+{"command": "insert", "args": {"characters": "\n"}},
+{"command": "move", "args": {"by": "lines", "forward": false}},
+{"command": "reindent"}
+]

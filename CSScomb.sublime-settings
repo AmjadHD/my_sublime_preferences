@@ -1,0 +1,11 @@
+{
+    "node-path" : "C:/Users/User/AppData/Local/atom/app-1.19.0-beta3/resources/app/apm/bin/node.exe",
+    "config": {
+        "block-indent": "  ",
+        "leading-zero": true,
+        "sort-order-fallback": "abc",
+        "space-before-combinator": " ",
+        "space-between-declarations": "\n",
+        "space-before-opening-brace": " ",
+    }
+}

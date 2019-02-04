@@ -1,0 +1,13 @@
+{
+	"extensions":
+	[
+		"sublime-settings",
+		"sublime-build",
+		"sublime-snippet",
+		"sublime-theme",
+		"tm-theme",
+		".jsbeautifyrc",
+		".jshintrc",
+		"sublime-keymap"
+	],
+}

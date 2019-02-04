@@ -1,0 +1,49 @@
+{
+	"bootstrapped": true,
+	"ignore_vcs_packages": true,
+	"in_process_packages":
+	[
+	],
+	"install_prereleases":
+	[
+		"SublimeLinter"
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"ayu",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"ColorSchemeEditor",
+		"Compare Side-By-Side",
+		"DA UI",
+		"Edit Preferences",
+		"Emmet",
+		"FileDiffs",
+		"Fortran",
+		"Git",
+		"GitGutter",
+		"Hover Image Preview",
+		"HTML5",
+		"Julia",
+		"LESS",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"Material Theme",
+		"Origami",
+		"Package Control",
+		"PackageDev",
+		"PackageResourceViewer",
+		"Sass",
+		"SideBarEnhancements",
+		"SyntaxFold",
+		"TabsExtra",
+		"Terminal",
+		"Terminus",
+		"Theme - One Dark",
+		"TypeScript Syntax"
+	],
+	"repositories":
+	[
+	]
+}

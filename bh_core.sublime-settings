@@ -1,0 +1,298 @@
+{
+    "brackets": [
+    {
+        "close": "(\\})",
+        "enabled": true,
+        "find_in_sub_search": "true",
+        "ignore_string_escape": true,
+        "language_filter": "blacklist",
+        "language_list": ["Plain text", "Hex"],
+        "name": "curly",
+        "open": "(\\{)",
+        "scope_exclude": ["string", "comment", "source.regexp constant.character.escape", "source.yaml-tmlanguage constant.character.escape"],
+        "scope_exclude_exceptions": ["text.tex string.other.math"],
+        "style": "curly"
+    },
+    {
+        "close": "(\\))",
+        "enabled": true,
+        "find_in_sub_search": "true",
+        "ignore_string_escape": true,
+        "language_filter": "blacklist",
+        "language_list": ["Plain text", "Hex", "RTF"],
+        "name": "round",
+        "open": "(\\()",
+        "scope_exclude": ["string", "comment", "source.regexp constant.character.escape", "punctuation.definition.case-pattern.shell", "source.yaml-tmlanguage constant.character.escape"],
+        "scope_exclude_exceptions": ["text.tex string.other.math", "punctuation.definition.string.begin.shell", "punctuation.definition.string.end.shell"],
+        "style": "round"
+    },
+    // Julia
+    {
+        "name": "Julia",
+        "open": "\\b(function|macro|(?:mutable )?struct|(?:abstract |primitive )?type|for|while|if|try|do|let|begin|quote|(?:bare)?module)\\b",
+        "close": "\\b(end)\\b[^\\[]",
+        "style": "default",
+        "plugin_library": "bh_modules.lowercase",
+        "scope_exclude": ["string", "comment"],
+        "language_filter": "whitelist",
+        "language_list": ["Julia"],
+        "enabled": true
+    },
+    {
+        "close": "(\\])",
+        "enabled": true,
+        "find_in_sub_search": "true",
+        "ignore_string_escape": true,
+        "language_filter": "blacklist",
+        "language_list": ["Plain text", "Hex", "RTF"],
+        "name": "square",
+        "open": "(\\[)",
+        "scope_exclude": ["string", "source.regexp constant.character.escape", "comment"],
+        "scope_exclude_exceptions": ["text.tex string.other.math", "source.yaml-tmlanguage meta.value -constant.character.escape"],
+        "style": "square"
+    },
+    {
+        "close": "(\\?>)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["HTML", "HTML 5"],
+        "name": "php_angle",
+        "open": "(<\\?)(?:php)?",
+        "scope_exclude": ["string", "comment", "keyword.operator"],
+        "style": "angle"
+    },
+    {
+        "close": "(?:(?<=[^?%])|(?<=^))(>)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["HTML", "HTML 5", "XML", "PHP", "HTML (Rails)", "HTML (Jinja Templates)", "HTML (Jinja2)", "HTML (Twig)", "HTML (Django)", "HTML+CFML", "ColdFusion", "ColdFusionCFC", "laravel-blade", "blade", "Handlebars", "AngularJS", "Java Server Pages (JSP)"],
+        "name": "angle",
+        "open": "(<)(?=[^?%]|$)",
+        "plugin_library": "bh_modules.tags",
+        "scope_exclude": ["string", "comment", "keyword.operator", "source.ruby.rails.embedded.html", "source.ruby.embedded.html", "storage.type.function.arrow.js", "punctuation.accessor.php", "punctuation.accessor.arrow.php"],
+        "style": "angle"
+    },
+    {
+        "close": "(/\\* *@end *\\*/)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["CSS"],
+        "name": "cssedit_groups",
+        "open": "(/\\* *@group .*\\*/)",
+        "scope_exclude": [],
+        "style": "default"
+    },
+    {
+        "close": "(?<=[\\s;])(end)\\b(?!:)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["HTML", "HTML 5", "HTML (Rails)"],
+        "name": "ruby_embedded_html",
+        "open": "((?:(?<=<%)|(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:)|(?<=return)\\s*\\b(?:begin|case|for|until|while|class|module)\\b(?!:))",
+        "plugin_library": "bh_modules.rubykeywords",
+        "scope_exclude": ["text.html", "source", "comment", "string"],
+        "scope_exclude_exceptions": ["source.ruby.rails.embedded.html -comment -string", "source.ruby.embedded.html -comment -string"],
+        "style": "default"
+    },
+    {
+        "close": "(?<=[\\s;])(end)\\b(?!:)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["Ruby", "RSpec", "Better RSpec", "Ruby on Rails"],
+        "name": "ruby",
+        "open": "((?:(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|^\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|^\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:)|(?<=return)\\s*\\b(?:begin|case|for|until|while|class|module)\\b(?!:))",
+        "plugin_library": "bh_modules.rubykeywords",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "(\\#endif)\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["C++", "C", "Objective-C", "CCpp", "C Improved"],
+        "name": "c_compile_switch",
+        "open": "(\\#(?:if|ifdef|ifndef))\\b",
+        "scope_exclude": ["string", "comment"],
+        "style": "c_define"
+    },
+    {
+        "close": "(?:(?<=^)|(?<=<\\?php)|(?<=<\\?))\\s*(endif|endfor|endforeach|endwhile|endswitch)\\b(?=\\s*(?:;|;?\\?>))",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["HTML", "HTML 5", "PHP", "HTML+CFML", "ColdFusion", "ColdFusionCFC"],
+        "name": "php_keywords",
+        "open": "(?:(?<=^)|(?<=<\\?php)|(?<=<\\?))\\s*(if|foreach|for|while|switch)\\b(?=.*?\\)\\s*:\\s*(?://.*?|/\\*.*?\\*/\\s*?)?(?:\\?>|$))",
+        "plugin_library": "bh_modules.phpkeywords",
+        "scope_exclude": ["string", "comment", "text.html"],
+        "scope_exclude_exceptions": ["source.php -comment -string"],
+        "style": "default"
+    },
+    {
+        "close": "\\b(end)\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["Erlang", "HTML (Erlang)"],
+        "name": "erlang",
+        "open": "\\s*(\\b(?:if|case|begin|try|fun(?=\\s*\\()|receive)\\b)",
+        "plugin_library": "bh_modules.lowercase",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "(?:(?<!\\\\\\n)(?:;|^)\\s*)\\b(fi|esac|done)(?=;|\\s|$)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["Shell-Unix-Generic"],
+        "name": "bash",
+        "open": "(?:(?<!\\\\\\n)(?:;|^|&|\\|)\\s*)\\b(if|case|while|select|until|for)\\s",
+        "plugin_library": "bh_modules.bashsupport",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "(?:(?<!\\\\\\n)(?:;|^)\\s*)\\b(end)(?=;|\\s|$)",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["fish"],
+        "name": "fish",
+        "open": "(?:(?<!\\\\\\n)(?:;|^|&|\\||and|or|not)\\s*)\\b(begin|if|while|for|switch|function)(?:;|\\s)",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "(?:(?<=[\\s;])|(?<=^))(end|until)\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["Lua"],
+        "name": "lua",
+        "open": "(?:(?<=[\\s;])|(?<=^))(if|while|function|do|repeat)\\b",
+        "plugin_library": "bh_modules.luakeywords",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "(\\\\end{[^}]*})",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["LaTeX", "LaTeX (TikZ)", "knitr (Rnw)"],
+        "name": "latexenv",
+        "open": "(\\\\begin{[^}]*})",
+        "plugin_library": "bh_modules.latexenvironments",
+        "scope_exclude": ["comment"],
+        "style": "tag",
+        "sub_bracket_search": "true"
+    },
+    {
+        "close": "(?<=[\\s;])(end(?=[;\\s])|until(?=\\s))",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["Pascal"],
+        "name": "pascal",
+        "open": "(?:(?<=^)|(?<=[\\s;]))(try|(?<=\\=\\s)(?:class|record|interface)|begin|repeat)\\b",
+        "plugin_library": "bh_modules.pascalkeywords",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "\\b(end)\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["Elixir"],
+        "name": "elixir",
+        "open": "\\b(do$|fn)\\b",
+        "scope_exclude": ["string", "comment"],
+        "style": "default"
+    },
+    {
+        "close": "\\b(end(?:foreach|function|if|macro|while))\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["CMake"],
+        "name": "cmake",
+        "open": "\\b(foreach|function|if|macro|while)\\b",
+        "plugin_library": "bh_modules.cmakekeywords",
+        "scope_exclude": ["-keyword.cmake"],
+        "style": "default"
+    },
+    {
+        "close": "\\b(END(?:IF|FOR|WHILE)|UNTIL)\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["s840d_gcode"],
+        "name": "s840d_gcode",
+        "open": "\\b(IF(?!.*GOTO)|FOR|WHILE|REPEAT(?!.*GOTO))\\b",
+        "plugin_library": "bh_modules.s840d_gcode",
+        "scope_exclude": ["string", "comment"],
+        "style": "tag"
+    },
+    {
+        "close": "^\\s*(//END|END_(?:ACTIVATE|CHANGE|FOCUS|IF|LOAD|UNLOAD|OUTPUT|PRESS|SUB))\\b",
+        "enabled": true,
+        "language_filter": "whitelist",
+        "language_list": ["s840d_hmi"],
+        "name": "s840d_hmi",
+        "open": "^\\s*(//[ABGMS]|ACTIVATE|CHANGE|FOCUS|IF|LOAD|UNLOAD|OUTPUT|PRESS|SUB)\\b",
+        "plugin_library": "bh_modules.s840d_hmi",
+        "scope_exclude": ["string", "comment"],
+        "style": "tag"
+    }],
+    "search_threshold": 10000,
+    "user_bracket_styles":
+    {
+        "angle":
+        {
+            "color": "region.orangish",
+            "icon": "angle_bracket"
+        },
+        "c_define":
+        {
+            "color": "region.yellowish",
+            "icon": "hash"
+        },
+        "curly":
+        {
+            "color": "region.purplish",
+            "icon": "curly_bracket",
+            "style": "none"
+        },
+        "default":
+        {
+            "color": "region.yellowish brackethighlighter.default",
+            "icon": "dot",
+            // "style": "underline"
+        },
+        "double_quote":
+        {
+            "color": "region.greenish",
+            "icon": "double_quote"
+        },
+        "regex":
+        {
+            "color": "region.greenish",
+            "icon": "star"
+        },
+        "round":
+        {
+            "color": "region.yellowish",
+            "icon": "round_bracket",
+            "style": "none"
+        },
+        "single_quote":
+        {
+            "color": "region.greenish",
+            "icon": "single_quote"
+        },
+        "square":
+        {
+            "color": "region.bluish",
+            "icon": "square_bracket",
+            "style": "none"
+        },
+        "tag":
+        {
+            "color": "region.orangish",
+            "icon": "tag"
+        }
+    },
+    "show_unmatched": false
+}

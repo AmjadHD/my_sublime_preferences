@@ -1,8 +1,0 @@
-{
-    "node_path":
-    {
-        "linux": "/usr/bin/nodejs",
-        "osx": "/usr/local/bin/node",
-        "windows": "node"
-    }
-}

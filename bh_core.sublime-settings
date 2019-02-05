@@ -30,7 +30,7 @@
     {
         "name": "Julia",
         "open": "\\b(function|macro|(?:mutable )?struct|(?:abstract |primitive )?type|for|while|if|try|do|let|begin|quote|(?:bare)?module)\\b",
-        "close": "\\b(end)\\b[^\\[]",
+        "close": "(?:(?:;|^)\\s*)\\b(end)(?=;|\\s|$)",
         "style": "default",
         "plugin_library": "bh_modules.lowercase",
         "scope_exclude": ["string", "comment"],

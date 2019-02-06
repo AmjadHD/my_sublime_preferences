@@ -170,7 +170,16 @@
 			],
 			"enabled": true,
 			"languageId": "python",
-			"configurationSources": ["flake8"],
+			"settings": {
+				"pyls": {
+					"configurationSources": ["flake8"],
+					"plugins": {
+						"pyflakes": {
+							"enabled": false
+						}
+					},
+				}
+			},
 			"scopes":
 			[
 				"source.python"

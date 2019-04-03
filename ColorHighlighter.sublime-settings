@@ -13,6 +13,7 @@
 		".xml",
 		".html",
 		".tmTheme",
+		".sublime-color-scheme"
 	],
 	"search_colors_in":
 	{
@@ -60,7 +61,7 @@
 					"style": "right"
 				}
 			},
-			"enabled": true
+			"enabled": false
 		},
 		"selection":
 		{
@@ -83,7 +84,7 @@
 					"style": "right"
 				}
 			},
-			"enabled": true
+			"enabled": false
 		}
 	}
 }

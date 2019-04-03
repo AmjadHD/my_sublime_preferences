@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"hidden-color-scheme"
+		"hidden-color-scheme",
+		"sublime-color-scheme"
 	]
 }

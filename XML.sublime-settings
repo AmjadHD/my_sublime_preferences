@@ -2,7 +2,8 @@
 	"extensions":
 	[
 		"hidden-tmLanguage",
-		"blob"
+		"blob",
+		"zpl"
 	],
 	"hidden_extensions":
 	[

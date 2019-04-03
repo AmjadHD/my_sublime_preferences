@@ -214,7 +214,6 @@
 			[
 				"rustup",
 				"run",
-				"nightly",
 				"rls"
 			],
 			"enabled": true,

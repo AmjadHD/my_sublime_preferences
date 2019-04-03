@@ -4,32 +4,27 @@
 	"in_process_packages":
 	[
 	],
-	"install_prereleases":
-	[
-		"SublimeLinter"
-	],
 	"installed_packages":
 	[
 		"A File Icon",
-		"ayu",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"ColorSchemeEditor",
 		"Compare Side-By-Side",
-		"DA UI",
 		"Edit Preferences",
 		"Emmet",
 		"FileDiffs",
 		"Fortran",
 		"Git",
 		"GitGutter",
-		"Hover Image Preview",
 		"HTML5",
 		"Julia",
 		"LESS",
+		"LSP",
 		"MarkdownEditing",
 		"MarkdownLivePreview",
 		"Material Theme",
+		"One Dark Color Scheme",
 		"Origami",
 		"Package Control",
 		"PackageDev",
@@ -42,8 +37,5 @@
 		"Terminus",
 		"Theme - One Dark",
 		"TypeScript Syntax"
-	],
-	"repositories":
-	[
 	]
 }

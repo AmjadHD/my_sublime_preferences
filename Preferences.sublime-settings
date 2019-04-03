@@ -6,10 +6,6 @@
 	"auto_complete_triggers":
 	[
 		{
-			"characters": "<",
-			"selector": "text.html"
-		},
-		{
 			"characters": ".",
 			"selector": "source.python, source.julia, source.js, source.ts"
 		}
@@ -35,7 +31,7 @@
 		"*.rar"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
+	"color_scheme": "Packages/Theme - One Dark/Two Dark.sublime-color-scheme",
 	"draw_minimap_border": true,
 	"draw_white_space": "none",
 	"enable_tab_scrolling": false,
@@ -64,7 +60,7 @@
 		"*.psd",
 		"*.sublime-workspace"
 	],
-	"font_size": 9,
+	"font_size": 8,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"i_donated_to_sidebar_enhancements_developer": true,
@@ -73,22 +69,22 @@
 		"ActionScript",
 		"AppleScript",
 		"ASP",
-		"ayu",
-		"Color Highlighter",
 		"Color Scheme - Legacy",
-		"ColorSchemeEditor",
+		"Compare Side-By-Side",
 		"DA UI",
 		"Edit Preferences",
 		"Emmet",
+		"FileDiffs",
 		"Fortran",
 		"Git",
+		"GitGutter",
 		"Hover Image Preview",
 		"HTML5",
-		"Markdown",
 		"MarkdownEditing",
 		"MarkdownLivePreview",
 		"Material Theme",
 		"Matlab",
+		"One Dark Color Scheme",
 		"PyV8",
 		"sublime_db",
 		"SyntaxFold",
@@ -108,13 +104,6 @@
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
 	"margin": 0,
-	"material_theme_bold_tab": true,
-	"material_theme_bright_scrollbars": true,
-	"material_theme_compact_panel": true,
-	"material_theme_compact_sidebar": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
 	"mdpopups.use_sublime_highlighter": true,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
@@ -129,8 +118,6 @@
 	"show_errors_inline": false,
 	"show_full_path": false,
 	"show_line_endings": true,
-	"skin": "DA UI/Elegant",
-	"swallow_startup_errors": true,
 	"tab_completion": false,
 	"theme": "One Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,

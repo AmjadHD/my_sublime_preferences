@@ -1,12 +1,93 @@
 [
 {
-    "keys": ["f7"],
+    "keys": ["ctrl+v"],
+    "command": "paste_and_indent"
+},
+{
+    "keys": ["ctrl+shift+v"],
+    "command": "paste"
+},
+{
+    "keys": ["ctrl+,"],
+    "command": "fold_all"
+},
+{
+    "keys": ["ctrl+."],
+    "command": "unfold_all"
+},
+{
+    "keys": ["ctrl+-"],
+    "command": "toggle_comment",
+    "args":
+    {
+        "block": false
+    }
+},
+{
+    "keys": ["ctrl+alt+t"],
+    "command": "open_terminal"
+},
+{
+    "keys": ["ctrl+shift+t"],
+    "command": "reopen_last_file"
+},
+{
+    "keys": ["ctrl+f"],
+    "command": "show_panel",
+    "args":
+    {
+        "panel": "replace",
+        "reverse": false
+    }
+},
+{
+    "keys": ["ctrl+shift+o"],
+    "command": "prompt_open_folder"
+},
+{
+    "keys": ["ctrl+k", "ctrl+l"],
+    "command": "title_case"
+},
+{
+    "keys": ["ctrl+k", "ctrl+i"],
+    "command": "swap_case"
+},
+{
+    "keys": ["ctrl+k", "ctrl+u"],
+    "command": "upper_case"
+},
+{
+    "keys": ["f5"],
     "command": "show_overlay",
     "args":
     {
-        "overlay": "command_palette"
+        "overlay": "command_palette",
+        "text": "Package Control: "
     }
 },
+{
+    "keys": ["alt+up"],
+    "command": "prev_modification",
+},
+{
+    "keys": ["alt+down"],
+    "command": "next_modification",
+},
+{ "keys": ["ctrl+k", "ctrl+z"], "command": "revert_modification" },
+
+{ "keys": ["alt+keypad_plus"], "command": "jump_forward" },
+
+// Origami
+{
+    "keys": ["ctrl+alt+z"],
+    "command": "toggle_zoom_pane",
+    "args":
+    {
+        "fraction": 0.9
+    }
+},
+
+// Bracket Highlighter
 {
     "keys": ["alt+x"],
     "command": "bh_remove_brackets"
@@ -29,105 +110,15 @@
         }
     }
 },
-{
-    "keys": ["ctrl+i"],
-    "command": "show_overlay",
-    "args":
-    {
-        "overlay": "goto",
-        "text": "#"
-    }
-},
-{
-    "keys": ["ctrl+;"],
-    "command": "show_overlay",
-    "args":
-    {
-        "overlay": "goto",
-        "show_files": true
-    }
-},
-{
-    "keys": ["f5"],
-    "command": "show_overlay",
-    "args":
-    {
-        "overlay": "command_palette",
-        "text": "Package Control: "
-    }
-},
-{
-    "keys": ["ctrl+'"],
-    "command": "left_delete"
-},
-{
-    "keys": ["ctrl+,"],
-    "command": "fold_all"
-},
-{
-    "keys": ["ctrl+."],
-    "command": "unfold_all"
-},
-{
-    "keys": ["ctrl+-"],
-    "command": "toggle_comment",
-    "args":
-    {
-        "block": false
-    }
-},
-{
-    "keys": ["ctrl+f"],
-    "command": "show_panel",
-    "args":
-    {
-        "panel": "replace",
-        "reverse": false
-    }
-},
-{
-    "keys": ["ctrl+h"],
-    "command": "replace_all",
-    "args":
-    {
-        "close_panel": true
-    },
-    "context": [
-    {
-        "key": "panel",
-        "operand": "replace"
-    },
-    {
-        "key": "panel_has_focus"
-    }]
-},
-{
-    "keys": ["ctrl+alt+m"],
-    "command": "show_scope_name"
-},
-{
-    "keys": ["ctrl+alt+z"],
-    "command": "toggle_zoom_pane",
-    "args":
-    {
-        "fraction": 0.9
-    }
-},
+
+// LSP
 {
     "command": "lsp_format_document",
     "keys": ["ctrl+alt+f"]
 },
 {
-    "keys": ["ctrl+alt+g"],
-    "command": "lsp_symbol_definition"
-},
-{
-    "keys": ["ctrl+v"],
-    "command": "paste_and_indent"
-},
-{
-    "keys": ["ctrl+shift+v"],
-    "command": "paste"
+    "command": "lsp_symbol_definition",
+    "keys": ["f12"]
 },
 {
     "keys": ["ctrl+f1"],
@@ -137,6 +128,8 @@
     "keys": ["shift+f5"],
     "command": "package_resource_viewer"
 },
+
+// Settings
 {
     "keys": ["f8"],
     "command": "edit_settings"
@@ -160,105 +153,17 @@
     }
 },
 {
-    "keys": ["ctrl+shift+o"],
-    "command": "prompt_open_folder"
+    "keys": ["ctrl+alt+f8"],
+    "command": "edit_syntax_settings"
 },
-{
-    "keys": ["ctrl+k", "ctrl+l"],
-    "command": "title_case"
-},
-{
-    "keys": ["ctrl+k", "ctrl+i"],
-    "command": "swap_case"
-},
-{
-    "keys": ["ctrl+k", "ctrl+u"],
-    "command": "upper_case"
-},
-{
-    "keys": ["é"],
-    "command": "insert",
-    "args":
-    {
-        "characters": "\n"
-    }
-},
-{
-    "keys": ["é"],
-    "command": "insert",
-    "args":
-    {
-        "characters": ";\n"
-    },
-    "context": [
-        {
-            "key": "preceding_text",
-            "operator": "not_regex_contains",
-            "operand": "(\\{|\\}|;|\\(|\\[)$|^( *)?$"
-        },
-        {
-            "key": "selector",
-            "operand": "source.java, source.css, source.c, source.c++"
-        }
-    ]
-},
-{
-    "keys": ["é"],
-    "command": "insert",
-    "args":
-    {
-        "characters": ",\n"
-    },
-    "context": [
-        {
-            "key": "preceding_text",
-            "operator": "not_regex_contains",
-            "operand": "(//|\\{|\\}|,|\\(|\\[)?\\s*?$|^\\s*?$"
-        },
-        {
-            "key": "selector",
-            "operand": "source.json"
-        }
-    ]
-},
-{
-    "keys": ["ctrl+alt+8"],
-    "command": "insert",
-    "args":
-    {
-        "characters": "("
-    }
-},
-{
-    "keys": ["super+]"],
-    "command": "insert",
-    "args":
-    {
-        "characters": "'"
-    }
-},
-{
-    "keys": ["super+a"],
-    "command": "insert",
-    "args":
-    {
-        "characters": "{"
-    }
-},
-{
-    "keys": ["ctrl+alt+8"],
-    "command": "insert",
-    "args":
-    {
-        "characters": "("
-    }
-},
+
+// Bracket Matching
 {
     "keys": ["\""],
     "command": "insert_snippet",
     "args":
     {
-        "contents": "\"$1\"$0"
+        "contents": "\"$1\""
     },
     "context": [
     {
@@ -296,7 +201,7 @@
     "command": "insert_snippet",
     "args":
     {
-        "contents": "'$1'$0"
+        "contents": "'$1'"
     },
     "context": [
     {
@@ -333,7 +238,7 @@
     "command": "insert_snippet",
     "args":
     {
-        "contents": "($1)$0"
+        "contents": "($1)"
     },
     "context": [
     {
@@ -359,7 +264,7 @@
     "command": "insert_snippet",
     "args":
     {
-        "contents": "[$1]$0"
+        "contents": "[$1]"
     },
     "context": [
     {
@@ -383,7 +288,7 @@
     "command": "insert_snippet",
     "args":
     {
-        "contents": "{$1}$0"
+        "contents": "{$1}"
     },
     "context": [
     {
@@ -403,15 +308,7 @@
     }]
 },
 {
-    "keys": ["ctrl+left"],
-    "command": "run_macro_file",
-    "args":
-    {
-        "file": "res://Packages/User/swap_line_up_and_indent.sublime-macro"
-    }
-},
-{
-    "keys": ["é"],
+    "keys": ["enter"],
     "command": "run_macro_file",
     "args":
     {
@@ -431,7 +328,15 @@
 ]
 },
 {
-    "keys": ["ctrl+right"],
+    "keys": ["ctrl+shift+up"],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/swap_line_up_and_indent.sublime-macro"
+    }
+},
+{
+    "keys": ["ctrl+shift+down"],
     "command": "run_macro_file",
     "args":
     {
@@ -443,18 +348,6 @@
     "command": "clone_file_to_new_view"
 },
 {
-    "keys": ["f9"],
-    "command": "toggle_bookmark"
-},
-{
-    "keys": ["ctrl+f9"],
-    "command": "next_bookmark"
-},
-{
-    "keys": ["ctrl+shift+f9"],
-    "command": "prev_bookmark"
-},
-{
     "keys": ["ctrl+shift+f5"],
     "command": "prompt_select_workspace"
 },
@@ -462,24 +355,7 @@
     "keys": ["ctrl+u"],
     "command": "profile"
 },
-{
-    "keys": ["ctrl+alt+f8"],
-    "command": "edit_syntax_settings"
-},
-{
-    "command": "fold_me",
-    "keys": ["ctrl+e"],
-    "context": [
-        {
-            "key": "selector",
-            "operator": "not_equal",
-            "operand": "source.python"
-        }
-    ],
-},
-{ "keys": ["ctrl+context_menu"], "command": "jump_back" },
-{ "keys": ["ctrl+shift+context_menu"], "command": "jump_forward" },
-{ "keys": ["ctrl+insert"], "command": "cancel_build" },
+
 // terminus
 {
     "keys": ["ctrl+'"],
@@ -513,14 +389,6 @@
     "context": [
         { "key": "terminus_view" },
         { "key": "auto_complete_visible" }
-    ]
-},
-{
-    "keys": ["tab"],
-    "command": "commit_completion",
-    "context": [
-        { "key": "terminus_view" },
-        { "key": "auto_complete_visible"}
     ]
 },
 {
@@ -605,28 +473,5 @@
     [
         { "key": "terminus_view" }
     ]
-},
-// SendCode
-// Send code to change the working folder to that holding the current Julia file
-{
-    "keys": ["ctrl+shift+x", "ctrl+f"], "command": "send_code",
-    "args": {"cmd": "cd(\"$file_path\")"},
-    "context": [
-        { "key": "selector", "operator": "equal", "operand": "source.julia" }
-    ]
-},
-// Send code to display help information. Thanks to @mbauman for the suggestion.
-{
-    "keys": ["ctrl+shift+x", "ctrl+h"], "command": "send_code",
-    "args": {"cmd": "REPL.@repl $selection"},
-    "context": [
-        { "key": "selector", "operator": "equal", "operand": "source.julia" }
-    ]
-},
-{
-    "keys": ["ctrl+alt+context_menu"], "command": "send_code",
-    "context": [
-        { "key": "selector", "operator": "equal", "operand": "source" }
-    ]
-},
+}
 ]

@@ -3,6 +3,6 @@ Package Control.merged-ca-bundle
 Package Control.last-run
 SBSCompareScheme.sublime-color-scheme
 SBSCompareTheme.tmTheme
-Package Control.cache/*
-Terminus/*
-Color Highlighter/*
+Package Control.cache/
+Terminus/
+Color Highlighter/

@@ -8,12 +8,12 @@
     "command": "paste"
 },
 {
-    "keys": ["ctrl+,"],
-    "command": "fold_all"
+    "keys": ["ctrl+alt+;"],
+    "command": "preview_image",
 },
 {
     "keys": ["ctrl+."],
-    "command": "unfold_all"
+    "command": "next_modification"
 },
 {
     "keys": ["ctrl+-"],

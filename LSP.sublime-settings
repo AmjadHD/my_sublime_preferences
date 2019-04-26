@@ -9,7 +9,7 @@
 				"bash-language-server.cmd",
 				"start"
 			],
-			"enabled": true,
+			"enabled": false,
 			"languageId": "bash",
 			"scopes":
 			[
@@ -17,7 +17,7 @@
 			],
 			"syntaxes":
 			[
-				"Bash"
+				"Packages/ShellScript/Bash.sublime-syntax"
 			]
 		},
 		"clangd":
@@ -36,7 +36,7 @@
 					],
 					"syntaxes":
 					[
-						"C"
+						"Packages/C++/C.sublime-syntax"
 					]
 				},
 				{
@@ -47,7 +47,7 @@
 					],
 					"syntaxes":
 					[
-						"C++"
+						"Packages/C++/C++.sublime-syntax"
 					]
 				},
 				{
@@ -58,7 +58,7 @@
 					],
 					"syntaxes":
 					[
-						"Objective-C"
+						"Packages/Objective-C/Objective-C.sublime-syntax"
 					]
 				},
 				{
@@ -69,7 +69,7 @@
 					],
 					"syntaxes":
 					[
-						"Objective-C++"
+						"Packages/Objective-C/Objective-C++.sublime-syntax"
 					]
 				}
 			]
@@ -92,7 +92,7 @@
 			],
 			"syntaxes":
 			[
-				"Java"
+				"Packages/Java/Java.sublime-syntax"
 			]
 		},
 		"julials":
@@ -113,7 +113,7 @@
 			],
 			"syntaxes":
 			[
-				"Julia"
+				"Packages/Julia/Julia.sublime-syntax"
 			]
 		},
 		"kotlinls":
@@ -130,7 +130,7 @@
 			],
 			"syntaxes":
 			[
-				"Kotlin"
+				"Packages/Kotlin/Kotlin.tmLanguage"
 			]
 		},
 		"lsp-tsserver":
@@ -154,11 +154,22 @@
 				]
 			},
 			{
-			  	"command": ["typescript-language-server", "--stdio"],
+			  	"command":
+			  	[
+			  		"typescript-language-server",
+			  		"--stdio"
+			  	],
 			  	"enabled": true,
 			  	"languageId": "typescript",
-			    "scopes": ["source.ts", "source.tsx"],
-			    "syntaxes": ["Typescript"]
+			    "scopes":
+			    [
+			    	"source.ts",
+			    	"source.tsx"
+			    ],
+			    "syntaxes":
+			    [
+			    	"Packages/TypeScript Syntax/TypeScript.tmLanguage"
+			    ]
 			}
 		]
 		},
@@ -172,9 +183,11 @@
 			"languageId": "python",
 			"settings": {
 				"pyls": {
-					"configurationSources": ["flake8"],
 					"plugins": {
 						"pyflakes": {
+							"enabled": false
+						},
+						"pylint": {
 							"enabled": false
 						}
 					},
@@ -186,15 +199,17 @@
 			],
 			"syntaxes":
 			[
-				"Python"
+				"Packages/Python/Python.sublime-syntax"
 			]
 		},
         "mspyls":
         {
-            "command": [ "dotnet.exe", "exec", "%USERPROFILE%\\Desktop\\Tfach\\python-language-server\\output\\bin\\Debug\\Microsoft.Python.LanguageServer.dll" ],
-            "scopes": ["source.python"],
-            "syntaxes": ["Packages/Python/Python.sublime-syntax"],
-            "languageId": "python",
+            "command":
+            [
+            	"dotnet.exe",
+            	"exec",
+            	"%USERPROFILE%\\Desktop\\Tfach\\python-language-server\\output\\bin\\Debug\\Microsoft.Python.LanguageServer.dll"
+            ],
             "enabled": false,
             "initializationOptions": 
             {
@@ -204,9 +219,18 @@
                     {
                         "UseDefaultDatabase": true,
                         "Version": "3.7"
-                    }                    
+                    }
                 }
-            }
+            },
+            "languageId": "python",
+            "scopes":
+            [
+            	"source.python"
+            ],
+            "syntaxes":
+            [
+            	"Packages/Python/Python.sublime-syntax"
+            ],
         },
 		"rls":
 		{
@@ -224,8 +248,7 @@
 			],
 			"syntaxes":
 			[
-				"Rust",
-				"RustEnhanced"
+				"Packages/Rust/Rust.sublime-syntax",
 			]
 		},
 		"vscode-css":
@@ -247,7 +270,7 @@
 					],
 					"syntaxes":
 					[
-						"CSS"
+						"Packages/CSS/CSS.sublime-syntax"
 					]
 				},
 				{
@@ -258,7 +281,7 @@
 					],
 					"syntaxes":
 					[
-						"SCSS"
+						"Packages/Sass/SCSS.sublime-syntax"
 					]
 				},
 				{
@@ -269,7 +292,7 @@
 					],
 					"syntaxes":
 					[
-						"Sass"
+						"Packages/Sass/Sass.sublime-syntax"
 					]
 				},
 				{
@@ -280,7 +303,7 @@
 					],
 					"syntaxes":
 					[
-						"LESS"
+						"Packages/LESS/LESS.sublime-syntax"
 					]
 				}
 			]
@@ -301,7 +324,7 @@
 			],
 			"syntaxes":
 			[
-				"Html"
+				"Packages/HTML/HTML.sublime-syntax"
 			]
 		},
 		"vscode-json":
@@ -320,14 +343,14 @@
 			],
 			"syntaxes":
 			[
-				"JSON"
+				"Packages/JavaScript/JSON.sublime-syntax"
 			]
 		}
 	},
-	"completion_hint_type": "auto",
 	"show_code_actions_bulb": true,
-	// "log_debug": true,
-	// "log_stderr": true,
-	// "log_payloads": true,
-	// "log_server": true
+	"complete_all_chars": false,
+	"log_debug": true,
+	"log_stderr": true,
+	"log_payloads": true,
+	"log_server": true
 }

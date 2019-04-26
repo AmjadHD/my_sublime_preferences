@@ -10,4 +10,11 @@
             "subtractive": true
         }
     },
+    {
+      "button": "button1",
+      "count": 1,
+      "modifiers": ["alt"],
+      "command": "open_context_url",
+      "press_command": "drag_select",
+    }
 ]

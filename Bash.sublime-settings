@@ -1,7 +1,3 @@
 {
-	"extensions":
-	[
-		"ps1"
-	],
-    "default_line_ending": "unix"
+	"default_line_ending": "unix"
 }

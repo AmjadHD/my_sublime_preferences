@@ -259,7 +259,7 @@
         {
             "color": "region.yellowish brackethighlighter.default",
             "icon": "dot",
-            // "style": "underline"
+            "style": "underline"
         },
         "double_quote":
         {
@@ -291,7 +291,8 @@
         "tag":
         {
             "color": "region.orangish",
-            "icon": "tag"
+            "icon": "tag",
+            "style": "none"
         }
     },
     "show_unmatched": false

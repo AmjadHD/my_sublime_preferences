@@ -26,6 +26,7 @@
 			[
 				"clangd"
 			],
+			"enabled": true,
 			"languages":
 			[
 				{
@@ -79,10 +80,26 @@
 			"command":
 			[
 				"java",
+				"--add-modules=ALL-SYSTEM",
+				"--add-opens",
+				"java.base/java.util=ALL-UNNAMED",
+				"--add-opens",
+				"java.base/java.lang=ALL-UNNAMED",
+				"-Declipse.application=org.eclipse.jdt.ls.core.id1",
+				"-Dosgi.bundles.defaultStartLevel=4",
+				"-Declipse.product=org.eclipse.jdt.ls.core.product",
+				"-Dfile.encoding=UTF-8",
+				"-DwatchParentProcess=false",
+				"-noverify",
+				"-Xmx1G",
+				"-XX:+UseG1GC",
+				"-XX:+UseStringDeduplication",
 				"-jar",
-				"C:/Program Files/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar",
+				"C:/Users/Lehdhili/.vscode/extensions/redhat.java-0.52.0/server/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar",
 				"-configuration",
-				"C:/Program Files/jdt-language-server/config_win"
+				"C:/Users/Lehdhili/.vscode/extensions/redhat.java-0.52.0/server/config_win",
+				"-data",
+				"C:/Users/Lehdhili/AppData/Local/Temp/${project_base_name}/jdt_ws"
 			],
 			"enabled": true,
 			"languageId": "java",
@@ -103,9 +120,9 @@
 				"--startup-file=no",
 				"--history-file=no",
 				"-e",
-				"using LanguageServer; server = LanguageServer.LanguageServerInstance(STDIN, STDOUT, false); run(server);"
+				"using LanguageServer, LanguageServer.SymbolServer;server = LanguageServer.LanguageServerInstance(stdin, stdout);run(server);"
 			],
-			"enabled": false,
+			"enabled": true,
 			"languageId": "julia",
 			"scopes":
 			[
@@ -120,7 +137,7 @@
 		{
 			"command":
 			[
-				"C:/Program Files/KotlinLanguageServer/build/install/kotlin-language-server/bin/kotlin-language-server.bat"
+				"D:/Downloads/Archives/server/bin/server.bat"
 			],
 			"enabled": true,
 			"languageId": "kotlin",
@@ -137,41 +154,166 @@
 		{
 			"command":
 			[
-				"lsp-tsserver"
+				"lsp-tsserver",
+				"--stdio"
+			],
+			"enabled": false,
+			"languages":
+			[
+				{
+					"languageId": "javascript",
+					"scopes":
+					[
+						"source.js",
+						"source.jsx"
+					],
+					"syntaxes":
+					[
+						"Packages/JavaScript/JavaScript.sublime-syntax",
+						"Packages/zzz A File Icon zzz/aliases/JavaScript (Gulpfile).sublime-syntax"
+					]
+				}
+			]
+		},
+		"lsp4xml":
+		{
+			"command":
+			[
+				"java",
+				"-DwatchParentProcess=false",
+				"-noverify",
+				"-Xmx64M",
+				"-XX:+UseG1GC",
+				"-XX:+UseStringDeduplication",
+				"-jar",
+				"C:/Users/Lehdhili/.vscode/extensions/redhat.vscode-xml-0.9.0/server/org.eclipse.lsp4xml-uber.jar"
 			],
 			"enabled": true,
-			"languages": [
+			"languageId": "xml",
+			"scopes":
+			[
+				"text.xml"
+			],
+			"settings":
 			{
-				"languageId": "javascript",
-				"scopes":
-				[
-					"source.js",
-					"source.jsx"
-				],
-				"syntaxes":
-				[
-					"Packages/JavaScript/JavaScript.sublime-syntax"
-				]
+				"xml":
+				{
+					"catalogs":
+					[
+					],
+					"completion":
+					{
+						"autoCloseTags": true
+					},
+					"fileAssociations":
+					[
+					],
+					"format":
+					{
+						"enabled": true,
+						"joinCDATALines": false,
+						"joinCommentLines": false,
+						"joinContentLines": false,
+						"preserveEmptyContent": false,
+						"preservedNewlines": 2,
+						"quotations": "doubleQuotes",
+						"spaceBeforeEmptyCloseTag": true,
+						"splitAttributes": false
+					},
+					"java":
+					{
+						"home": null
+					},
+					"logs":
+					{
+						"client": true
+					},
+					"server":
+					{
+						"vmargs": "-noverify -Xmx64M -XX:+UseG1GC -XX:+UseStringDeduplication",
+						"workDir": "~/.lsp4xml"
+					},
+					"symbols":
+					{
+						"enabled": true
+					},
+					"trace":
+					{
+						"server": "off"
+					},
+					"validation":
+					{
+						"enabled": true,
+						"noGrammar": "hint",
+						"schema": true
+					}
+				}
 			},
-			{
-			  	"command":
-			  	[
-			  		"typescript-language-server",
-			  		"--stdio"
-			  	],
-			  	"enabled": true,
-			  	"languageId": "typescript",
-			    "scopes":
-			    [
-			    	"source.ts",
-			    	"source.tsx"
-			    ],
-			    "syntaxes":
-			    [
-			    	"Packages/TypeScript Syntax/TypeScript.tmLanguage"
-			    ]
-			}
-		]
+			"syntaxes":
+			[
+				"Packages/XML/XML.sublime-syntax"
+			]
+		},
+		"lua-ls":
+		{
+			"command":
+			[
+				"D:/Downloads/Archives/sumneko.lua-0.12.12/extension/server/Windows/bin/lua",
+				"-E",
+				"D:/Downloads/Archives/sumneko.lua-0.12.12/extension/server/main.lua"
+			],
+			"enabled": true,
+			"languageId": "lua",
+			"scopes":
+			[
+				"source.lua"
+			],
+			"syntaxes":
+			[
+				"Packages/Lua/Lua.sublime-syntax"
+			]
+		},
+		"powershell-ls":
+		{
+			"command":
+			[
+				"C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+				"-NoLogo",
+				"-NoProfile",
+				"-NonInteractive",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"D:/Amjad/PowerShellEditorServices/PowerShellEditorServices/Start-EditorServices.ps1",
+				"-LogPath",
+				"D:/Amjad/pses.log",
+				"-LogLevel",
+				"Normal",
+				"-SessionDetailsPath",
+				"D:/Amjad/session.json",
+				"-FeatureFlags",
+				"@()",
+				"-HostName",
+				"'Sublime Text'",
+				"-HostProfileId",
+				"subl",
+				"-HostVersion",
+				"1.0.0",
+				"-AdditionalModules",
+				"@()",
+				"-BundledModulesPath",
+				"D:/Amjad/PowerShellEditorServices -Stdio"
+			],
+			"enabled": true,
+			"languageId": "powershell",
+			"scopes":
+			[
+				"source.powershell"
+			],
+			"syntaxes":
+			[
+				"Packages/PowerShell/Support/PowershellSyntax.tmLanguage"
+			]
 		},
 		"pyls":
 		{
@@ -181,63 +323,43 @@
 			],
 			"enabled": true,
 			"languageId": "python",
-			"settings": {
-				"pyls": {
-					"plugins": {
-						"pyflakes": {
-							"enabled": false
-						},
-						"pylint": {
-							"enabled": false
-						}
-					},
-				}
-			},
 			"scopes":
 			[
 				"source.python"
 			],
+			"settings":
+			{
+				"pyls":
+				{
+					"plugins":
+					{
+						"jedi":
+						{
+							"extra_paths":
+							[
+								"D:/Amjad/Tfach/sublime_dev"
+							]
+						},
+						"pyflakes":
+						{
+							"enabled": true
+						},
+						"pylint":
+						{
+							"enabled": false
+						}
+					}
+				}
+			},
 			"syntaxes":
 			[
 				"Packages/Python/Python.sublime-syntax"
 			]
 		},
-        "mspyls":
-        {
-            "command":
-            [
-            	"dotnet.exe",
-            	"exec",
-            	"%USERPROFILE%\\Desktop\\Tfach\\python-language-server\\output\\bin\\Debug\\Microsoft.Python.LanguageServer.dll"
-            ],
-            "enabled": false,
-            "initializationOptions": 
-            {
-                "interpreter": 
-                {
-                    "properties": 
-                    {
-                        "UseDefaultDatabase": true,
-                        "Version": "3.7"
-                    }
-                }
-            },
-            "languageId": "python",
-            "scopes":
-            [
-            	"source.python"
-            ],
-            "syntaxes":
-            [
-            	"Packages/Python/Python.sublime-syntax"
-            ],
-        },
 		"rls":
 		{
 			"command":
 			[
-				"rustup",
-				"run",
 				"rls"
 			],
 			"enabled": true,
@@ -248,15 +370,135 @@
 			],
 			"syntaxes":
 			[
-				"Packages/Rust/Rust.sublime-syntax",
+				"Packages/Rust/Rust.sublime-syntax"
 			]
+		},
+		"typescript-language-server":
+		{
+			"command":
+			[
+				"typescript-language-server",
+				"--stdio"
+			],
+			"enabled": true,
+			"languages":
+			[
+				{
+					"languageId": "javascript",
+					"scopes":
+					[
+						"source.js",
+						"source.jsx"
+					],
+					"syntaxes":
+					[
+						"Packages/JavaScript/JavaScript.sublime-syntax",
+						"Packages/zzz A File Icon zzz/aliases/JavaScript (Gulpfile).sublime-syntax"
+					]
+				},
+				{
+					"languageId": "typescript",
+					"scopes":
+					[
+						"source.ts",
+						"source.tsx"
+					],
+					"syntaxes":
+					[
+						"Packages/TypeScript Syntax/TypeScript.tmLanguage",
+						"Packages/TypeScript Syntax/TypeScriptReact.tmLanguage"
+					]
+				}
+			]
+		},
+		"vscode-json":
+		{
+			"command":
+			[
+				"node",
+				"C:/Users/Lehdhili/AppData/Roaming/npm/node_modules/vscode-json-languageserver/out/jsonServerMain.js",
+				"--stdio"
+			],
+			"enabled": true,
+			"languages":
+			[
+				{
+					"languageId": "json",
+					"scopes":
+					[
+						"source.json",
+					],
+					"syntaxes":
+					[
+						"Packages/JSON/JSON.sublime-syntax",
+						"Packages/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax"
+					]
+				},
+				{
+					"languageId": "jsonc",
+					"scopes":
+					[
+						"source.json.sublime.project"
+					],
+					"syntaxes":
+					[
+						"Packages/PackageDev/Package/Sublime Text Project/Sublime Text Project.sublime-syntax"
+					]
+				},
+				{
+					"languageId": "jsonc",
+					"scopes":
+					[
+						"source.json.sublime.build"
+					],
+					"syntaxes":
+					[
+						"Packages/PackageDev/Package/Sublime Text Build System/Sublime Text Build System.sublime-syntax"
+					]
+				},
+				{
+					"languageId": "jsonc",
+					"scopes":
+					[
+						"source.json.sublime.settings"
+					],
+					"syntaxes":
+					[
+						"Packages/PackageDev/Package/Sublime Text Settings/Sublime Text Settings.sublime-syntax"
+					]
+				}
+			],
+			"settings": {
+				"json": {
+					"schemas": [
+						{
+						  "fileMatch": ["*.sublime-project"],
+						  "url": "file:///D:/Amjad/sublime_json_schemas/sublime_project.json"
+						},
+						{
+						  "fileMatch": ["*.sublime-build"],
+						  "url": "file:///D:/Amjad/sublime_json_schemas/sublime_build.json"
+						},
+						{
+						  "fileMatch": ["Preferences.sublime-settings"],
+						  "url": "file:///D:/Amjad/sublime_json_schemas/preferences.json"
+						},
+					],
+					"format": {
+						"enable": false
+					}
+				}
+			},
+			"initializationOptions": {
+				"provideFormatter": false
+			}
 		},
 		"vscode-css":
 		{
 			"command":
 			[
 				"node",
-				"%USERPROFILE%/AppData/Roaming/npm/node_modules/vscode-css-languageserver-bin/cssServerMain.js",
+				"C:/Users/Lehdhili/AppData/Roaming/npm/node_modules/vscode-css-languageserver-bin/cssServerMain.js",
 				"--stdio"
 			],
 			"enabled": true,
@@ -299,11 +541,11 @@
 					"languageId": "less",
 					"scopes":
 					[
-						"source.css.less"
+						"source.less"
 					],
 					"syntaxes":
 					[
-						"Packages/LESS/LESS.sublime-syntax"
+						"Packages/LESS/Syntaxes/LESS.sublime-syntax"
 					]
 				}
 			]
@@ -313,7 +555,7 @@
 			"command":
 			[
 				"node",
-				"%USERPROFILE%/AppData/Roaming/npm/node_modules/vscode-html-languageserver-bin/htmlServerMain.js",
+				"C:/Users/Lehdhili/AppData/Roaming/npm/node_modules/vscode-html-languageserver-bin/htmlServerMain.js",
 				"--stdio"
 			],
 			"enabled": true,
@@ -322,35 +564,58 @@
 			[
 				"text.html"
 			],
+			"settings":
+			{
+				"html":
+				{
+					"autoClosingTags": true,
+					"customData":
+					[
+					],
+					"format":
+					{
+						"contentUnformatted": "pre,code,textarea",
+						"enable": true,
+						"endWithNewline": false,
+						"extraLiners": "head, body, /html",
+						"indentHandlebars": false,
+						"indentInnerHtml": false,
+						"maxPreserveNewLines": null,
+						"preserveNewLines": true,
+						"unformatted": "wbr",
+						"wrapAttributes": "auto",
+						"wrapLineLength": 120
+					},
+					"sugest":
+					{
+						"html5": true
+					},
+					"trace":
+					{
+						"server": "off"
+					},
+					"validate":
+					{
+						"scripts": false,
+						"styles": false
+					}
+				}
+			},
 			"syntaxes":
 			[
 				"Packages/HTML/HTML.sublime-syntax"
 			]
-		},
-		"vscode-json":
-		{
-			"command":
-			[
-				"node",
-				"%USERPROFILE%/AppData/Roaming/npm/node_modules/vscode-json-languageserver-bin/jsonServerMain.js",
-				"--stdio"
-			],
-			"enabled": true,
-			"languageId": "json",
-			"scopes":
-			[
-				"source.json"
-			],
-			"syntaxes":
-			[
-				"Packages/JavaScript/JSON.sublime-syntax"
-			]
 		}
 	},
-	"show_code_actions_bulb": true,
-	"complete_all_chars": false,
+	"disabled_capabilities":
+	[
+		"colorProvider"
+	],
 	"log_debug": true,
-	"log_stderr": true,
 	"log_payloads": true,
-	"log_server": true
+	"log_server": true,
+	"log_stderr": true,
+	"show_code_actions_bulb": true,
+	"show_diagnostics_count_in_view_status": false,
+	"show_diagnostics_in_view_status": false
 }

@@ -6,3 +6,6 @@ SBSCompareTheme.tmTheme
 Package Control.cache/
 Terminus/
 Color Highlighter/
+OverrideAudit.status
+*.hidden-color-scheme
+*.hidden-tmTheme

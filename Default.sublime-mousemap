@@ -14,7 +14,14 @@
       "button": "button1",
       "count": 1,
       "modifiers": ["alt"],
-      "command": "open_context_url",
+      "command": "lsp_symbol_definition",
+      "press_command": "drag_select",
+    },
+    {
+      "button": "button1",
+      "count": 2,
+      "modifiers": ["alt"],
+      "command": "lsp_symbol_references",
       "press_command": "drag_select",
     }
 ]

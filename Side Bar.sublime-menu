@@ -1,0 +1,4 @@
+[
+    { "caption": "-", "id": "repo_commands" },
+    { "caption": "Git Rename", "command": "git_rename", "args": {"paths": []}}
+]

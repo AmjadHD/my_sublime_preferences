@@ -1,0 +1,6 @@
+{
+    "renderer_interval": 5000,
+    "typing_period": 1000,
+    "show_open_button": "hover",
+    "popup_text_html": ""
+}

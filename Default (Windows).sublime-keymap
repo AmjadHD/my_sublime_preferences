@@ -8,6 +8,14 @@
     "command": "paste"
 },
 {
+    "keys": ["ctrl+k", "ctrl+r"],
+    "command": "revert"
+},
+{
+    "keys": ["ctrl+alt+delete"],
+    "command": "delete_open_file"
+},
+{
     "keys": ["ctrl+alt+;"],
     "command": "preview_image",
 },
@@ -28,12 +36,12 @@
     "command": "prompt_open_folder"
 },
 {
-    "keys": ["ctrl+k", "ctrl+l"],
+    "keys": ["ctrl+k", "ctrl+t"],
     "command": "title_case"
 },
 {
-    "keys": ["ctrl+k", "ctrl+i"],
-    "command": "swap_case"
+    "keys": ["ctrl+k", "ctrl+l"],
+    "command": "lower_case"
 },
 {
     "keys": ["ctrl+k", "ctrl+u"],
@@ -49,12 +57,22 @@
     }
 },
 {
-    "keys": ["alt+up"],
-    "command": "prev_modification",
+    "keys": ["ctrl+alt+p"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "command_palette",
+        "text": "Project: "
+    }
 },
 {
-    "keys": ["alt+down"],
-    "command": "next_modification",
+    "keys": ["ctrl+k", "ctrl+f"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "command_palette",
+        "text": "File: "
+    }
 },
 { "keys": ["ctrl+k", "ctrl+z"], "command": "revert_modification" },
 
@@ -80,6 +98,19 @@
     "command": "swap_brackets"
 },
 {
+    "keys": ["ctrl+alt+q"],
+    "command": "bh_key",
+    "args":
+    {
+        "lines" : true,
+        "plugin":
+        {
+            "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
+            "command": "bh_modules.swapquotes"
+        }
+    }
+},
+{
     "no_outside_adj": null,
     "keys": ["alt+d"],
     "command": "bh_key",
@@ -94,6 +125,23 @@
     }
 },
 
+{ "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`$0`"},
+    "context":
+    [
+        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+        { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+    //     { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+        { "key": "preceding_text", "operator": "not_regex_contains", "operand": "[`a-zA-Z0-9_]$", "match_all": true },
+        // { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.double - punctuation.definition.string.end", "match_all": true }
+    ]
+},
+{ "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`${0:$SELECTION}`"}, "context":
+    [
+        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+        { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+},
+
 // LSP
 {
     "command": "lsp_format_document",
@@ -101,11 +149,34 @@
 },
 {
     "command": "lsp_symbol_definition",
-    "keys": ["f12"]
+    "keys": ["f12"],
+    "context": [
+        {
+            "key": "lsp_active"
+        }
+    ],
 },
 {
-    "keys": ["ctrl+f1"],
-    "command": "select_syntax_color_scheme"
+    "command":"lsp_symbol_references",
+    "keys": ["shift+f12"],
+    "context": [
+        {
+            "key": "lsp_active"
+        }
+    ],
+},
+{
+    "keys": ["f1"],
+    "command": "show_overlay",
+    "args":
+    {
+        "overlay": "command_palette",
+        "text": "LSP: "
+    }
+},
+{
+    "keys": ["ctrl+shift+f6"],
+    "command": "toggle_debug_lsp",
 },
 {
     "keys": ["shift+f5"],
@@ -156,12 +227,9 @@
     "command": "clone_file_to_new_view"
 },
 {
-    "keys": ["ctrl+shift+f5"],
-    "command": "prompt_select_workspace"
-},
-{
-    "keys": ["ctrl+u"],
-    "command": "profile"
+    "keys": ["alt+w"],
+    "command": "prompt_select_workspace",
+    "context": [{"key": "panel_has_focus", "operator": "equal", "operand": false}]
 },
 
 // terminus

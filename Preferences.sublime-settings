@@ -3,16 +3,6 @@
 	"animation_enabled": false,
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_cycle": true,
-	"auto_complete_triggers":
-	[
-		{
-			"characters": "<",
-			"selector": "text.html"
-		},
-		{
-			"selector": "punctuation.accessor"
-		}
-	],
 	"auto_complete_use_index": false,
 	"binary_file_patterns":
 	[
@@ -35,18 +25,12 @@
 		"__pycache__/**",
 		"bin/**"
 	],
-	"bold_folder_labels": true,
-	"caret_extra_bottom": 1,
-	"caret_extra_top": 2,
-	"caret_extra_width": 1,
-	"color_scheme": "Packages/Dark Knight/Dark Knight.sublime-color-scheme",
-	"emmet_abbreviation_scopes":
-	[
-		"text - (entity, punctuation.definition.tag.end) - comment",
-		"text.html meta.attribute-with-value.style string.quoted"
-	],
+	"caret_extra_bottom": 2,
+	"highlight_gutter": false,
+	"caret_extra_top": 1,
+	"caret_style": "solid",
+	"color_scheme": "Packages/Theme - One/One Dark.sublime-color-scheme",
 	"enable_tab_scrolling": false,
-	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -68,11 +52,11 @@
 		".DS_Store",
 		"*.class",
 		"*.psd",
-		".github/**",
-		".mypy_cache/**",
-		".vscode/**"
+		"*.sublime-workspace",
+		".github/",
+		".mypy_cache/",
+		".vscode/"
 	],
-	"font_face": "Fira Mono Medium",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -80,25 +64,29 @@
 		"ActionScript",
 		"AppleScript",
 		"ASP",
-		"Color Highlighter",
 		"Color Scheme - Legacy",
 		"Debugger",
-		"Edit Preferences",
-		"Emmet2",
-		"INI",
-		"LSP-jdtls",
-		"LSP-json",
-		"LSP-RLS",
-		"LSP-vue",
-		"MarkdownEditing",
-		"SyntaxFold",
+		"Default",
+		"FileDiffs",
+		"Git",
+		"Graphviz",
+		"Groovy",
+		"ImagePreview",
+		"LSP-css",
+		"LSP-typescript",
+		"OverrideAudit",
+		"Sass",
 		"TabsExtra",
-		"Vintage"
+		"TCL",
+		"Terminus",
+		"Textile",
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
 		"draw_active",
-		"draw_normal"
+		"draw_normal",
+		"solid"
 	],
 	"indent_to_bracket": true,
 	"index_exclude_patterns":
@@ -107,10 +95,9 @@
 		"*.json",
 		"node_modules/**"
 	],
-	"line_padding_bottom": 1,
-	"line_padding_top": 2,
+	"line_padding_bottom": 2,
+	"line_padding_top": 1,
 	"margin": 0,
-	"match_selection": false,
 	"mdpopups.sublime_user_lang_map":
 	{
 		"julia":
@@ -130,22 +117,25 @@
 			[
 				"PowerShell/Support/PowershellSyntax"
 			]
-		]
+		],
 	},
 	"mdpopups.use_sublime_highlighter": true,
 	"mini_auto_complete": true,
-	"one_dark.show_vcs_status_badges": true,
-	"one_dark_sidebar_font_fira": true,
+	"mini_diff": "auto",
 	"open_files_in_new_window": false,
 	"rulers":
 	[
 		80
 	],
-	"save_on_focus_lost": true,
 	"shift_tab_unindent": true,
 	"show_full_path": false,
-	"theme": "One Dark.sublime-theme",
+	"theme": "One.sublime-theme",
 	"tree_animation_enabled": false,
-	"word_wrap": true,
-	"auto_complete_preserve_order": "none"
+	"word_wrap": "auto",
+	"preview_on_click": "only_left",
+	"dark_theme": "One.sublime-theme",
+	"light_theme": "One.sublime-theme",
+	"dark_color_scheme": "Packages/Theme - One/One Dark.sublime-color-scheme",
+	"light_color_scheme": "Packages/Theme - One/One Light.sublime-color-scheme",
+	"fade_fold_buttons": false,
 }

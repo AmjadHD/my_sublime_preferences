@@ -25,7 +25,7 @@ class GitRenameCommand(sublime_plugin.WindowCommand):
         v.sel().add(sublime.Region(0, len(name)))
 
     def is_enabled(self, paths):
-        return osp.isfile(paths[0])
+        return len(paths) == 1 and osp.isfile(paths[0])
 
-    def is_visible(self):
-        return osp.exists(osp.join(self.window.folders()[0], ".git"))
+    def is_visible(self, paths):
+        return osp.exists(osp.join(osp.dirname(paths[0]), ".git"))

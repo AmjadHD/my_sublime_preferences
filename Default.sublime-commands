@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Edit Configurations",
+        "command": "edit_settings"
+    },
+    {
+        "caption": "Browse Commands",
+        "command": "browse_commands"
+    },
+]

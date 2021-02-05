@@ -1,0 +1,9 @@
+{
+	"userSchemas":
+	[
+		{
+			"fileMatch": ["pyrightconfig.json"],
+			"uri": "https://raw.githubusercontent.com/microsoft/pyright/master/client/schemas/pyrightconfig.schema.json"
+		},
+	]
+}

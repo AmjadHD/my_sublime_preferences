@@ -1,0 +1,4 @@
+// These settings override both User and Default settings for the sbnf syntax
+{
+	"default_line_ending": "unix"
+}

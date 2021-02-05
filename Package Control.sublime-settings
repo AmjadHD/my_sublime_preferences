@@ -1,43 +1,34 @@
 {
 	"bootstrapped": true,
 	"ignore_vcs_packages": true,
-	"in_process_packages":
-	[
-	],
 	"installed_packages":
 	[
 		"A File Icon",
 		"BracketHighlighter",
-		"Color Highlighter",
-		"Compare Side-By-Side",
-		"Edit Preferences",
-		"ElixirSyntax",
-		"Emmet2",
 		"FileDiffs",
 		"FileManager",
+		"Git",
+		"GitHub Theme",
 		"INI",
-		"Julia",
-		"Kotlin",
 		"LESS",
+		"LSP",
+		"LSP-css",
 		"LSP-json",
-		"MarkdownEditing",
-		"MarkdownLivePreview",
+		"LSP-pyright",
+		"LSP-typescript",
 		"MarkdownPreview",
-		"NimLime",
 		"OpenUri",
-		"Origami",
 		"OverrideAudit",
 		"Package Control",
 		"PackageDev",
-		"PackageResourceViewer",
 		"PowerShell",
 		"Sass",
-		"SyntaxFold",
 		"TabsExtra",
 		"Terminal",
 		"Terminus",
-		"Theme - One Dark",
-		"TypeScript Syntax",
-		"Vue Syntax Highlight"
-	]
+		"Theme - DAneo",
+	],
+	"in_process_packages":
+	[
+	],
 }

@@ -5,6 +5,7 @@
 	[
 		"A File Icon",
 		"BracketHighlighter",
+		"ColorHelper",
 		"FileDiffs",
 		"FileManager",
 		"Git",
@@ -12,11 +13,11 @@
 		"INI",
 		"LESS",
 		"LSP",
-		"LSP-css",
 		"LSP-json",
 		"LSP-pyright",
 		"LSP-typescript",
 		"MarkdownPreview",
+		"NimLime",
 		"OpenUri",
 		"OverrideAudit",
 		"Package Control",
@@ -24,11 +25,11 @@
 		"PowerShell",
 		"Sass",
 		"TabsExtra",
-		"Terminal",
 		"Terminus",
 		"Theme - DAneo",
 	],
 	"in_process_packages":
 	[
 	],
+	"install_prereleases": ["ColorHelper"],
 }

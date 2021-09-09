@@ -1,6 +1,65 @@
 {
-	"clients":
-	{
+	"clients": {
+		"clangd": {
+			"enabled": true
+		},
+		"diagnostic-ls": {
+			"enabled": false,
+			"command": [
+				"diagnostic-languageserver",
+				"--stdio"
+			],
+			"selector": "source.python",
+			"initializationOptions": {
+				"linters": {
+					"flake8": {
+						"command": "flake8",
+						"debounce": 100,
+						"args": [
+							"--extend-ignore=W191",
+							"--format",
+							"%(row)d,%(col)d,%(code).1s,%(text)s[%(code)s]",
+						],
+						"sourceName": "flake8",
+						"formatLines": 1,
+						"formatPattern": [
+							"(\\d+),(\\d+),()([A-Z]),(.*)",
+							{
+								"line": 1,
+								"column": 2,
+								"security": 3, // Match a zero-length group so everything can be classified as a Warning rather than Error
+								"message": 5,
+							}
+						],
+						"securities": {
+							"": "warning",
+						},
+					},
+				},
+				"formatters": {
+					"yapf": {
+						"command": "yapf"
+					}
+				},
+				"filetypes": {
+					"python": "flake8",
+				},
+				"formatFiletypes": {
+					"python": "yapf"
+				}
+			},
+		},
+		"nimlsp": {
+			"enabled": true,
+			"command": ["nimlsp"],
+			"selector": "source.nim",
+			"disabled_capabilities": {
+			    "completionProvider": {
+			        "triggerCharacters": true,
+			    }
+			},
+			"auto_complete_selector": "punctuation.accessor" 
+		}
 	},
 	"diagnostics_gutter_marker": "sign",
 	"disabled_capabilities":
@@ -10,8 +69,7 @@
 	],
 	"log_debug": true,
 	"log_server": ["panel"],
-	"log_stderr": true,
 	"show_diagnostics_count_in_view_status": false,
 	"show_diagnostics_in_view_status": false,
-	"show_symbol_action_links": true
+	"show_symbol_action_links": true,
 }

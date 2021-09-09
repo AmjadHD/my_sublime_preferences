@@ -12,12 +12,9 @@
     "command": "revert"
 },
 {
-    "keys": ["ctrl+alt+delete"],
-    "command": "delete_open_file"
-},
-{
-    "keys": ["ctrl+alt+;"],
-    "command": "preview_image",
+    "keys": ["alt+delete"],
+    "command": "delete_word",
+    "args": {"forward": true, "sub_words": true},
 },
 {
     "keys": ["ctrl+."],
@@ -25,7 +22,7 @@
 },
 {
     "keys": ["ctrl+alt+t"],
-    "command": "open_terminal"
+    "command": "fm_open_terminal"
 },
 {
     "keys": ["ctrl+shift+t"],
@@ -65,14 +62,25 @@
         "text": "Project: "
     }
 },
-{ "keys": ["ctrl+k", "ctrl+z"], "command": "revert_modification" },
+{
+    "keys": ["ctrl+k", "ctrl+z"],
+    "command": "revert_modification"
+},
+{
+    "keys": ["ctrl+k", "ctrl+p"],
+    "command": "expand_selection_to_paragraph",
+},
+{
+    "keys": ["ctrl+k", "ctrl+i"],
+    "command": "expand_selection",
+    "args": {"to": "indentation"}
+},
 
 // User
 {
     "keys": ["ctrl+k", "ctrl+shift+d"],
     "command": "toggle_all_diffs"
 },
-// Origami
 {
     "keys": ["ctrl+alt+z"],
     "command": "toggle_zoom_pane",
@@ -253,18 +261,24 @@
 },
 {
     "keys": ["ctrl+shift+up"],
-    "command": "run_macro_file",
+    "command": "chain",
     "args":
     {
-        "file": "res://Packages/User/swap_line_up_and_indent.sublime-macro"
+        "commands": [
+            {"command": "swap_line_up"},
+            {"command": "reindent", "args": {"single_line": true}}
+        ]
     }
 },
 {
     "keys": ["ctrl+shift+down"],
-    "command": "run_macro_file",
+    "command": "chain",
     "args":
     {
-        "file": "res://Packages/User/swap_line_down_and_indent.sublime-macro"
+        "commands": [
+            {"command": "swap_line_down"},
+            {"command": "reindent", "args": {"single_line": true}},
+        ]
     }
 },
 {
